@@ -7,21 +7,21 @@ environment:
 
 dependencies: 
   cupertino_icons: ^1.0.2
-  get: 4.6.5
-  flutter: 
-    sdk: flutter
   json_annotation: ^4.6.0
   freezed_annotation: ^2.1.0
   http: ^0.13.5
   dropdown_search: ^5.0.2
+  get: 4.6.5
+  flutter: 
+    sdk: flutter
 
 dev_dependencies: 
   build_runner: ^2.2.0
   flutter_lints: ^2.0.0
-  flutter_test: 
-    sdk: flutter
   freezed: ^2.1.0+1
   json_serializable: ^6.3.1
+  flutter_test: 
+    sdk: flutter
 
 flutter: 
   uses-material-design: true
