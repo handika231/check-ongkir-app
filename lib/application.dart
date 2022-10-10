@@ -13,6 +13,10 @@ class Application extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) {
         return MaterialApp(
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+            visualDensity: VisualDensity.adaptivePlatformDensity,
+          ),
           debugShowCheckedModeBanner: false,
           title: 'Ongkir App',
           home: child,
