@@ -14,7 +14,10 @@ _$_CostResponse _$$_CostResponseFromJson(Map<String, dynamic> json) =>
       destinationDetails: json['destination_details'] == null
           ? null
           : City.fromJson(json['destination_details'] as Map<String, dynamic>),
-      results: json['results'] as List<CostResults>? ?? const <CostResults>[],
+      results: (json['results'] as List<dynamic>?)
+              ?.map((e) => CostResults.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const <CostResults>[],
     );
 
 Map<String, dynamic> _$$_CostResponseToJson(_$_CostResponse instance) =>
