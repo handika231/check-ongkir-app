@@ -1,5 +1,5 @@
 import 'package:check_ongkir_app/domain/city/city.dart';
-import 'package:check_ongkir_app/domain/cost/cost_result.dart';
+import 'package:check_ongkir_app/domain/cost/cost_results.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'cost_response.freezed.dart';
