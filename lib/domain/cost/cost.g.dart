@@ -7,11 +7,13 @@ part of 'cost.dart';
 // **************************************************************************
 
 _$_Cost _$$_CostFromJson(Map<String, dynamic> json) => _$_Cost(
-      rajaongkir: json['rajaongkir'] == null
-          ? null
-          : Rajaongkir.fromJson(json['rajaongkir'] as Map<String, dynamic>),
+      value: json['value'] as int? ?? 0,
+      etd: json['etd'] as String? ?? "",
+      note: json['note'] as String? ?? "",
     );
 
 Map<String, dynamic> _$$_CostToJson(_$_Cost instance) => <String, dynamic>{
-      'rajaongkir': instance.rajaongkir,
+      'value': instance.value,
+      'etd': instance.etd,
+      'note': instance.note,
     };

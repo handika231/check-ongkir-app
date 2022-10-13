@@ -20,7 +20,9 @@ Cost _$CostFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Cost {
-  Rajaongkir? get rajaongkir => throw _privateConstructorUsedError;
+  int get value => throw _privateConstructorUsedError;
+  String get etd => throw _privateConstructorUsedError;
+  String get note => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -31,9 +33,7 @@ mixin _$Cost {
 abstract class $CostCopyWith<$Res> {
   factory $CostCopyWith(Cost value, $Res Function(Cost) then) =
       _$CostCopyWithImpl<$Res>;
-  $Res call({Rajaongkir? rajaongkir});
-
-  $RajaongkirCopyWith<$Res>? get rajaongkir;
+  $Res call({int value, String etd, String note});
 }
 
 /// @nodoc
@@ -46,25 +46,24 @@ class _$CostCopyWithImpl<$Res> implements $CostCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? rajaongkir = freezed,
+    Object? value = freezed,
+    Object? etd = freezed,
+    Object? note = freezed,
   }) {
     return _then(_value.copyWith(
-      rajaongkir: rajaongkir == freezed
-          ? _value.rajaongkir
-          : rajaongkir // ignore: cast_nullable_to_non_nullable
-              as Rajaongkir?,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as int,
+      etd: etd == freezed
+          ? _value.etd
+          : etd // ignore: cast_nullable_to_non_nullable
+              as String,
+      note: note == freezed
+          ? _value.note
+          : note // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
-  }
-
-  @override
-  $RajaongkirCopyWith<$Res>? get rajaongkir {
-    if (_value.rajaongkir == null) {
-      return null;
-    }
-
-    return $RajaongkirCopyWith<$Res>(_value.rajaongkir!, (value) {
-      return _then(_value.copyWith(rajaongkir: value));
-    });
   }
 }
 
@@ -73,10 +72,7 @@ abstract class _$$_CostCopyWith<$Res> implements $CostCopyWith<$Res> {
   factory _$$_CostCopyWith(_$_Cost value, $Res Function(_$_Cost) then) =
       __$$_CostCopyWithImpl<$Res>;
   @override
-  $Res call({Rajaongkir? rajaongkir});
-
-  @override
-  $RajaongkirCopyWith<$Res>? get rajaongkir;
+  $Res call({int value, String etd, String note});
 }
 
 /// @nodoc
@@ -90,13 +86,23 @@ class __$$_CostCopyWithImpl<$Res> extends _$CostCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? rajaongkir = freezed,
+    Object? value = freezed,
+    Object? etd = freezed,
+    Object? note = freezed,
   }) {
     return _then(_$_Cost(
-      rajaongkir: rajaongkir == freezed
-          ? _value.rajaongkir
-          : rajaongkir // ignore: cast_nullable_to_non_nullable
-              as Rajaongkir?,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as int,
+      etd: etd == freezed
+          ? _value.etd
+          : etd // ignore: cast_nullable_to_non_nullable
+              as String,
+      note: note == freezed
+          ? _value.note
+          : note // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -104,16 +110,23 @@ class __$$_CostCopyWithImpl<$Res> extends _$CostCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Cost implements _Cost {
-  _$_Cost({this.rajaongkir});
+  _$_Cost({this.value = 0, this.etd = "", this.note = ""});
 
   factory _$_Cost.fromJson(Map<String, dynamic> json) => _$$_CostFromJson(json);
 
   @override
-  final Rajaongkir? rajaongkir;
+  @JsonKey()
+  final int value;
+  @override
+  @JsonKey()
+  final String etd;
+  @override
+  @JsonKey()
+  final String note;
 
   @override
   String toString() {
-    return 'Cost(rajaongkir: $rajaongkir)';
+    return 'Cost(value: $value, etd: $etd, note: $note)';
   }
 
   @override
@@ -121,14 +134,18 @@ class _$_Cost implements _Cost {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Cost &&
-            const DeepCollectionEquality()
-                .equals(other.rajaongkir, rajaongkir));
+            const DeepCollectionEquality().equals(other.value, value) &&
+            const DeepCollectionEquality().equals(other.etd, etd) &&
+            const DeepCollectionEquality().equals(other.note, note));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(rajaongkir));
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(value),
+      const DeepCollectionEquality().hash(etd),
+      const DeepCollectionEquality().hash(note));
 
   @JsonKey(ignore: true)
   @override
@@ -144,12 +161,17 @@ class _$_Cost implements _Cost {
 }
 
 abstract class _Cost implements Cost {
-  factory _Cost({final Rajaongkir? rajaongkir}) = _$_Cost;
+  factory _Cost({final int value, final String etd, final String note}) =
+      _$_Cost;
 
   factory _Cost.fromJson(Map<String, dynamic> json) = _$_Cost.fromJson;
 
   @override
-  Rajaongkir? get rajaongkir;
+  int get value;
+  @override
+  String get etd;
+  @override
+  String get note;
   @override
   @JsonKey(ignore: true)
   _$$_CostCopyWith<_$_Cost> get copyWith => throw _privateConstructorUsedError;
